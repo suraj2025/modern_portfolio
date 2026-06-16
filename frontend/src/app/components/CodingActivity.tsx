@@ -98,7 +98,7 @@ export function CodingActivity() {
 const [loading, setLoading] = useState(true);
 
 useEffect(() => {
-  fetch("http://localhost:8080/api/leetcode/stats")
+  fetch("https://modern-portfolio-g72z.onrender.com/api/leetcode/stats")
     .then((res) => res.json())
     .then((data) => {
       setStats(data);
