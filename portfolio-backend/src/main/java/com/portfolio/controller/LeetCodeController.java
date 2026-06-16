@@ -13,7 +13,7 @@ import com.portfolio.Service.LeetCodeService;
 @CrossOrigin(
     origins = {
         "http://localhost:5173",
-        "https://suraj-nine.vercel.app"
+        "https://modern-portfolio-gamma-liart.vercel.app/"
     }
 )
 public class LeetCodeController {
