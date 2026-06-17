@@ -46,7 +46,10 @@ export function AboutSection() {
   const [stats, setStats] = useState(null);
 
 useEffect(() => {
-  fetch("https://modern-portfolio-g72z.onrender.com/api/leetcode/stats")
+  fetch(
+    "https://modern-portfolio-g72z.onrender.com/api/leetcode/stats"
+    // "http://localhost:8080/api/leetcode/stats"
+  )
     .then(res => res.json())
     .then(data => setStats(data));
 }, []);

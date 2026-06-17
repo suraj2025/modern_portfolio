@@ -4,9 +4,9 @@ import { useRef } from "react";
 import { Mail, Linkedin, Github, MapPin, Send, CheckCircle } from "lucide-react";
 
 const contactItems = [
-  { icon: Mail, label: "Email", value: "suraj.kumar@example.com", href: "mailto:suraj.kumar@example.com", color: "#A855F7" },
-  { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/surajkumar", href: "https://linkedin.com/in/surajkumar", color: "#0A66C2" },
-  { icon: Github, label: "GitHub", value: "github.com/surajkumar", href: "https://github.com/surajkumar", color: "#c4b5fd" },
+  { icon: Mail, label: "Email", value: "suraj.kumar5195609@gmail.com", href: "mailto:suraj.kumar5195609@gmail.com", color: "#A855F7" },
+  { icon: Linkedin, label: "LinkedIn", value: "https://linkedin.com/in/suraj-kumar-16ba2b221", href: "https://linkedin.com/in/suraj-kumar-16ba2b221", color: "#0A66C2" },
+  { icon: Github, label: "GitHub", value: "github.com/suraj2025", href: "https://github.com/suraj2025", color: "#c4b5fd" },
   { icon: MapPin, label: "Location", value: "India (Remote-friendly)", href: "#", color: "#10b981" },
 ];
 

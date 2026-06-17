@@ -282,7 +282,7 @@ export function AIAssistant() {
 
           {/* Suggestions */}
           <div
-className="px-5 pb-3 flex flex-wrap gap-2"            style={{ scrollbarWidth: "none" }}
+            className="px-5 pb-3 flex flex-wrap gap-2" style={{ scrollbarWidth: "none" }}
           >
             {suggestions.map((s) => (
               <button
