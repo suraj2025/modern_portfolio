@@ -47,8 +47,8 @@ export function AboutSection() {
 
 useEffect(() => {
   fetch(
-    "https://modern-portfolio-g72z.onrender.com/api/leetcode/stats"
-    // "http://localhost:8080/api/leetcode/stats"
+    // "https://modern-portfolio-g72z.onrender.com/api/leetcode/stats"
+    "http://localhost:8080/api/leetcode/stats"
   )
     .then(res => res.json())
     .then(data => setStats(data));

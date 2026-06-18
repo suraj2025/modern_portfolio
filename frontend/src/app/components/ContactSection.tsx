@@ -2,6 +2,14 @@ import { useState } from "react";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { Mail, Linkedin, Github, MapPin, Send, CheckCircle } from "lucide-react";
+import emailjs from "@emailjs/browser";
+
+// Add this constant at the top (outside component)
+const EMAILJS_CONFIG = {
+  serviceId: "service_zrw8zim",   // 🔁 replace
+  templateId: "template_2p6d6jh", // 🔁 replace
+  publicKey: "Ibalya9sT8MPGS_SA",   // 🔁 replace
+};
 
 const contactItems = [
   { icon: Mail, label: "Email", value: "suraj.kumar5195609@gmail.com", href: "mailto:suraj.kumar5195609@gmail.com", color: "#A855F7" },
@@ -17,17 +25,34 @@ export function ContactSection() {
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSending(true);
-    setTimeout(() => {
-      setSending(false);
-      setSent(true);
-      setTimeout(() => setSent(false), 4000);
-      setForm({ name: "", email: "", subject: "", message: "" });
-    }, 1400);
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setSending(true);
 
+  try {
+    await emailjs.send(
+      EMAILJS_CONFIG.serviceId,
+      EMAILJS_CONFIG.templateId,
+      {
+        from_name: form.name,
+        from_email: form.email,
+        subject: form.subject,
+        message: form.message,
+      },
+      EMAILJS_CONFIG.publicKey
+    );
+
+    setSent(true);
+    setForm({ name: "", email: "", subject: "", message: "" });
+    setTimeout(() => setSent(false), 4000);
+
+  } catch (error) {
+    console.error("EmailJS error:", error);
+    alert("Something went wrong. Please try again.");
+  } finally {
+    setSending(false);
+  }
+};
   const inputStyle = {
     background: "rgba(168,85,247,0.06)",
     border: "1px solid rgba(168,85,247,0.18)",
