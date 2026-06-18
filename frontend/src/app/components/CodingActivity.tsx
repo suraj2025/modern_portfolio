@@ -120,8 +120,8 @@ export function CodingActivity() {
   useEffect(() => {
     // GitHub contributions
     fetch(
-    // "https://modern-portfolio-g72z.onrender.com/api/github/contributions"
-    "http://localhost:8080/api/github/contributions"
+    "https://modern-portfolio-g72z.onrender.com/api/github/contributions"
+    // "http://localhost:8080/api/github/contributions"
   )
       .then(res => res.json())
       .then(data => {
@@ -147,8 +147,8 @@ export function CodingActivity() {
       .catch(() => setGithubLoading(false))
     // Stats fetch
     fetch(
-    // "https://modern-portfolio-g72z.onrender.com/api/leetcode/stats"
-    "http://localhost:8080/api/leetcode/stats"
+    "https://modern-portfolio-g72z.onrender.com/api/leetcode/stats"
+    // "http://localhost:8080/api/leetcode/stats"
   )
       .then((res) => res.json())
       .then((data) => {
@@ -159,8 +159,8 @@ export function CodingActivity() {
 
     // Weekly fetch
     fetch(
-    // "https://modern-portfolio-g72z.onrender.com/api/leetcode/weekly"
-    "http://localhost:8080/api/leetcode/weekly"
+    "https://modern-portfolio-g72z.onrender.com/api/leetcode/weekly"
+    // "http://localhost:8080/api/leetcode/weekly"
   )
       .then((res) => res.json())
       .then((data) => {
