@@ -84,7 +84,7 @@ useEffect(() => {
                     boxShadow: "0 0 40px rgba(168,85,247,0.2)",
                   }}
                 >
-                  <img src ="./profile.png" alt="profile" className="p-1 rounded-2xl"/>
+                  <img src ="./PROFILE.jpg" alt="profile" className="p-1 rounded-2xl"/>
                   {/* <User size={40} style={{ color: "#A855F7" }} /> */}
                   <div
                     className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full flex items-center justify-center"
