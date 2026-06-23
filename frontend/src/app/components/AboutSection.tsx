@@ -77,7 +77,7 @@ useEffect(() => {
               <div className="flex items-start gap-6">
                 {/* Avatar */}
                 <div
-                  className="w-26 h-30 rounded-2xl flex-shrink-0 flex items-center justify-center relative"
+                  className="w-26 h-40 rounded-2xl flex-shrink-0 flex items-center justify-center relative"
                   style={{
                     background: "linear-gradient(135deg, rgba(168,85,247,0.3), rgba(124,58,237,0.2))",
                     border: "2px solid rgba(168,85,247,0.4)",
